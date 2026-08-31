@@ -1,4 +1,9 @@
+<prompt_patterns>
+
 # Prompt Patterns
+
+## Purpose
+The prompt vocabulary this skill generates with.
 
 The vocabulary this skill generates with. Read it at the prompt writing step.
 
@@ -163,3 +168,11 @@ subject, bottom right corner empty
 | Five rewordings of one bet | No spread, nothing to learn from the scores |
 | Shipping the generation | Generated faces and invented UI read as fake |
 | Trusting a rendered number | It is fabricated. Composite the real screenshot |
+
+
+---
+
+## Sources
+The five clause structure is original to this skill, corroborated by the field split used in the ChatGPT-to-thumbnail templates circulating in creator communities (Character and Pose, Props, Background, Text Overlay, Style and Colour Palette). The two failure modes, craft language being typeset into the frame and fabricated numbers in generated UI, are from production runs. The mockup-not-final position is from the Thumbnail MasterClass by david, dill and ant.
+
+</prompt_patterns>

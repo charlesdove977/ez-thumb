@@ -55,17 +55,45 @@ It builds you a corpus of your own, once, and then designs against it.
   1  profiles your channel, assets, and what has already worked
   2  finds your competitors      vidIQ MCP, or you name them
   3  pulls their best thumbnails Apify MCP, last 90 days, top 5 each
-  4  reads every single image    vision, one row per thumbnail
-  5  flags the bought views      like rate under 0.5 percent
-  6  writes all of it back into itself
+  4  DOWNLOADS every image       saved to reference/<date>-<niche>/
+  5  reads every single one      vision, one CSV row per thumbnail
+  6  flags the bought views      like rate under 0.5 percent
+  7  writes all of it back into itself
 
 /ez-thumb           EVERY VIDEO AFTER
   reads what it already learned, packages your video against it
 ```
 
-The corpus is a one-time build. It does not re-pull, it does not re-interview, and it does not ask you to set anything up twice. `/ez-thumb refresh` rebuilds it when your competitors change or when it goes stale.
+### The competitor pull is what makes the output yours
 
----
+This is the part worth understanding before you install it.
+
+Step 4 is not a cache. **The thumbnails are downloaded and kept**, filed by channel and sorted by performance:
+
+```
+skill/reference/2026-08-31-your-niche/
+  README.md          the findings, with a generated: date stamp
+  records.csv        one row per thumbnail, 15 columns
+  thumbnails/
+    competitor-a/000212554-2026-07-10-how-i-built-a.jpg
+    competitor-a/000103342-2026-07-09-gpt-made-this.jpg
+    competitor-b/000285219-2026-07-23-turn-this-into.jpg
+    ...
+```
+
+The nine digit prefix is the zero-padded view count, so every channel folder sorts worst-to-best on sight.
+
+Those saved images are then **used as the working reference every time you run `/ez-thumb`**. Not as background flavour, as a hard requirement:
+
+- Before writing anything, it reads the corpus and names the **current cliche in your niche**, so your concepts either avoid it or break it on purpose
+- It ranks your niche's **concept carriers** by breakout, so it knows whether faces, screens, comparisons or objects actually win where you compete
+- **Every concept it gives you cites a real thumbnail by filename.** A concept with no citation is a guess, and this skill will not ship one
+- It opens the top outliers and describes what they do that the median frame does not
+- Anything flagged as bought traffic is labelled *composition reference only* out loud whenever it is cited
+
+So the thumbnails you get out are shaped by the actual visual language of your competitors, in your niche, from the last 90 days. Not by the average of everyone's YouTube advice.
+
+Run `/ez-thumb refresh` when the set changes or the corpus goes stale, and it keeps the old folder so you can see which patterns rose and which burned out.
 
 ## The part that makes it different
 
@@ -157,13 +185,50 @@ The skill also writes its flags as data properties rather than as accusations ab
 
 ---
 
-## Credit
+## Where the knowledge came from
 
-The **Four Cs** structure comes from the Thumbnail MasterClass by david, dill and ant. Worth buying.
+EZ Thumb is not opinion. Every framework in it traces to a named source, and where the sources disagree it says so instead of quietly picking a side.
 
-The consensus framework cross-checks public teardowns by **Isaac**, **Website Learners**, **DecodingYT**, **TubeBuddy**, and **Devesh Sharma**. Where they contradict each other, EZ Thumb says so rather than picking a side quietly. Go watch all five.
+### The forensic teardown
 
-Everything measured, the breakout ranking, the bought-view filter, the pattern decay numbers, came out of production runs.
+Five of the highest-performing public thumbnail teachings on YouTube were run through a full forensic pass: downloaded, sampled at one frame per second, transcribed locally with Whisper, and read frame by frame with vision. All five transcripts end to end. **108 contact sheets. Nothing skimmed, nothing sampled.**
+
+| Creator | Video | Views |
+| --- | --- | --- |
+| Isaac | [How I Actually Make Viral Thumbnails](https://www.youtube.com/watch?v=mI7cq4uHCZ4) | 1,017,482 |
+| Website Learners | [FREE AI Makes YouTube Thumbnails Like MrBeast](https://www.youtube.com/watch?v=0FDiB-nrQ8M) | 727,384 |
+| DecodingYT | [How to Make VIRAL YouTube Thumbnails](https://www.youtube.com/watch?v=9GGr9WuKIMQ) | 576,102 |
+| TubeBuddy | [11 Thumbnail Design Hacks Top Creators Use](https://www.youtube.com/watch?v=dB6DXcZo6hE) | 351,116 |
+| Devesh Sharma | [The Ultimate Guide to Creating Viral Thumbnails](https://www.youtube.com/watch?v=Flx1Ugy3ZPQ) | 235,281 |
+
+That pass produced `frameworks/creator-consensus.md`: **fifteen rules that survived the cross-check**, a merged twelve-format library, and **seven places where these creators flatly contradict each other**, each with the resolution this skill actually encodes. A few of those contradictions:
+
+- **Research your niche, or refuse to.** One says copy what is working. Another calls that the worst thing you can do, because it makes you the eleventh instance of a frame the audience already saw at 100K. Resolved as: research in-niche to find the cliche, take visual inspiration out-of-niche. Research is for diagnosis, not imitation.
+- **Colour theory, or a fixed palette.** The wheel maximizes contrast inside one frame. A locked five-slot palette maximizes recognition across a channel page. They solve different problems, so use both.
+- **Consistency, or formula fatigue.** Consistency wins for about five videos, then starts costing clicks. Hold the font and palette skeleton, rotate the accent and the format.
+
+The single-source rules are kept too, because a rule only one person teaches is often the most valuable one: the dark-mode contrast trap, before-goes-left-after-goes-right, the 45 percent of viewing that happens on a TV, the recognizable-interface workaround for creators with no famous face, and *more elements equals less focus, fewer words equals larger text*.
+
+### The MasterClass breakdown
+
+The **Thumbnail MasterClass** by **david, dill and ant** is where the backbone comes from. **Go buy it, it is worth it.** What EZ Thumb encodes from it:
+
+| From the deck | Lives in |
+| --- | --- |
+| The Four Cs: Composition, Colour, Clean Assets, Curiosity | `frameworks/four-cs.md` |
+| The four curiosity levers, and good clickbait as exaggerating interest not reality | `frameworks/curiosity-gap.md` |
+| The five step process: Needs, Sketch, Prompt, Mockup, Design | `frameworks/five-step-process.md` |
+| Packaging concepts before design, and the Safe / Emotion / Contrast / Leverage spread | `frameworks/five-step-process.md` |
+| Audience calibration by age, and the credibility-versus-energy split | `frameworks/audience-calibration.md` |
+| Watch time above CTR, and testing three distinct ideas as paired title-plus-thumbnail units | `frameworks/testing-and-metrics.md` |
+| **The bottom right belongs to YouTube's duration stamp** (no other source in the corpus mentions it) | `frameworks/four-cs.md` |
+| Free composition grid guide at [thumbnailmockup.com](https://thumbnailmockup.com) | `frameworks/four-cs.md` |
+
+No slides, no deck text and no course material are redistributed here. These are the ideas, restated, credited, and cross-checked against five independent sources.
+
+### Measured in production
+
+The breakout ranking, the bought-view filter, the pattern-decay numbers, and the two generator failure modes (craft language getting typeset into the frame, fabricated numbers in generated UI) all came out of real runs, not from any guide.
 
 ---
 

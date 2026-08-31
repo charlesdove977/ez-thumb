@@ -1,4 +1,9 @@
+<corpus_method>
+
 # Corpus Method
+
+## Purpose
+How to turn a folder of competitor thumbnails into evidence you can design against.
 
 How to turn a folder of competitor thumbnails into evidence you can actually design against. Load this whenever competitor data is pulled, ranked, or cited.
 
@@ -109,3 +114,22 @@ So every corpus folder carries a `generated:` date in its README, and the skill 
 | over 90 days | **Refuse to cite it as current evidence.** Tell the user to run `/ez-thumb refresh` |
 
 An expired corpus is still fine for composition and craft reference. Composition ages slowly. Trend claims do not.
+
+
+---
+
+## Anti-Patterns
+
+| Pattern | Why it fails |
+| --- | --- |
+| Ranking on raw views across channels of different sizes | Hides which thumbnail actually worked, and rewards the biggest channel by default |
+| Deriving a rule before running the like-rate filter | Bought traffic silently sits at the top and every rule from it is wrong |
+| Inferring a CSV row from a video title | The whole point is that something looked at the image |
+| Citing a `paid_flag` thumbnail as click evidence | It proves composition, never conversion |
+| Quoting a corpus percentage past 90 days | Trend claims rot. Composition observations do not |
+| Naming a person as a cheat in operator-facing output | Write the flag as a data property, not an accusation |
+
+## Sources
+Breakout ranking, the like-rate threshold, the paid-placement filter and the 90 day expiry all derived from production corpus runs, not from any published guide.
+
+</corpus_method>

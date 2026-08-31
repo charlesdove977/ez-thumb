@@ -1,4 +1,9 @@
+<data_sources>
+
 # Data Sources
+
+## Purpose
+How competitor data gets into this skill.
 
 How competitor data gets into this skill. Two decisions, and they are separate: **who** the competitors are, and **how** their thumbnails get pulled.
 
@@ -90,3 +95,22 @@ The zero-padded view count sorts each channel folder by performance, best last. 
 - **No YouTube Data API path.** It is free, but it costs the user a Google Cloud project, an API key, and a quota conversation before they see a single thumbnail. Apify is one token. If you already have a Data API key wired up, using it instead is fine; the corpus method downstream is identical.
 - **No page scraping.** Fragile, gets blocked, and returns no like counts.
 - **No corpus shipped in this package.** Every thumbnail in a corpus belongs to the creator who made it. This skill builds a local research set for the operator's own analysis and gitignores it. Never commit a corpus to a public repository, and never redistribute one.
+
+
+---
+
+## Anti-Patterns
+
+| Pattern | Why it fails |
+| --- | --- |
+| Pulling before the operator approved the roster | Spends their credits on channels they did not choose |
+| Omitting `includeVideoStats` | No likes means no like rate means no bought-views filter. The corpus becomes untrustworthy |
+| Leaving Shorts in a longform pull | Two different crafts averaged together, both conclusions wrong |
+| A window longer than 90 days | Pulls in patterns that have already burned out |
+| Scraping YouTube pages when Apify is unavailable | Fragile, gets blocked, returns no like counts |
+| Shipping a corpus inside the package | Those thumbnails belong to the creators who made them |
+
+## Sources
+Apify actor contract and the `search.list` avoidance verified in production runs. vidIQ discovery tooling per the vidIQ MCP.
+
+</data_sources>

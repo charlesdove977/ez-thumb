@@ -1,3 +1,8 @@
+---
+name: thumbnail-review
+description: Structure for scoring a finished thumbnail: both viewing passes, the four C scores, niche placement, and a single specific fix.
+---
+
 # Template: Thumbnail Review
 
 For scoring a finished thumbnail. Fill it top to bottom; do not jump to the verdict.

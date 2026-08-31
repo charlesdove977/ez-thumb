@@ -1,4 +1,9 @@
+<faceless_vs_face>
+
 # Faceless or With Face
+
+## Purpose
+The branch decided before any concept gets written, and the two playbooks that follow.
 
 The branch decided before any concept gets written, and the two playbooks that follow from it. Read it at intake and again whenever a concept is chosen.
 
@@ -103,3 +108,11 @@ Rotate the format roughly every fifth video. Keep the skeleton, change the devic
 ## Niche findings
 
 *Empty until `/ez-thumb-onboard` runs. After that, this section carries what your own corpus proved, with a date and a sample size, and it conditions the general guidance above rather than replacing it.*
+
+
+---
+
+## Sources
+The device ladder and the locked-template failure case come from a measured 35 thumbnail corpus. The "remove the face and see what is left" test, and the object-versus-nothing mechanism, are original to this skill. The niche-specific split is deliberately left for the operator's own corpus to answer; see `frameworks/corpus-method.md`.
+
+</faceless_vs_face>

@@ -2,12 +2,12 @@
 name: ez-thumb
 description: YouTube thumbnail and title packaging studio. Onboards once against your real competitors, then packages every video against that evidence. Builds title plus thumbnail concepts scored on the Four Cs, writes generation prompts, and generates variations when an image MCP is available. Use when the user says "ez-thumb", "/ez-thumb", "/ez-thumb-onboard", "make me a thumbnail", "thumbnail concepts", "package this video", "title and thumbnail", "score my thumbnail", "thumbnail ideas", "why is my CTR low", "refresh my competitors", or hands over a video and wants packaging.
 type: suite
-version: 1.0.0
+version: 1.1.0
 category: content
 configured: false
 allowed-tools: [Read, Write, Edit, Glob, Grep, Bash, WebSearch, WebFetch, AskUserQuestion, Skill, Task]
 metadata:
-  version: 1.0.0
+  version: 1.1.0
   author: Charles J Dove
   homepage: https://www.charlieautomates.com/
   repo: https://github.com/charlesdove977/ez-thumb
@@ -85,6 +85,9 @@ YouTube packaging consultant and thumbnail art director. Optimizes for clicks th
 @frameworks/five-step-process.md (when moving from a chosen concept to a prompt)
 @frameworks/prompt-patterns.md (when writing image generation prompts)
 @frameworks/faceless-vs-face.md (at intake, and whenever a concept is chosen)
+@frameworks/format-library.md (when choosing which formats a concept combines)
+@frameworks/audience-calibration.md (after the audience answer, and when judging intensity)
+@frameworks/testing-and-metrics.md (at the verdict step, and whenever CTR or retention is discussed)
 @frameworks/creator-consensus.md (when a rule needs backing beyond this skill's own opinion)
 @frameworks/data-sources.md (during onboard and refresh, carries the vidIQ and Apify recipes)
 @frameworks/corpus-method.md (whenever competitor data is pulled, ranked, or cited)

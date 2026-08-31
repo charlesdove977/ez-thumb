@@ -1,4 +1,9 @@
+<four_cs>
+
 # The Four Cs
+
+## Purpose
+The load bearing framework for every concept and every score in this skill.
 
 The load bearing framework. Read it before writing any concept and before assigning any number out of 10.
 
@@ -15,6 +20,10 @@ Where things sit, and how big they are.
 **The bottom right is not yours.** YouTube stamps the duration over the bottom right corner of every single thumbnail. Anything you put there, a face, a hand, a word, gets a black pill dropped on top of it. Keep it empty. This is the single most common unforced error in amateur thumbnails.
 
 **Scale.** The test is never whether it looks good at full width. The test is whether the subject still reads at roughly 120 pixels wide, which is where most impressions actually happen. Design at that size, check at full size, not the other way round.
+
+**Alignment.** An unbalanced canvas with dead space reads as amateur even when every other decision is right. The eye registers the imbalance before it registers the idea.
+
+**Check it at three sizes, not one.** Roughly 120 pixels for the suggested feed, which renders smaller than search. Full width for craft. And at TV scale, because 45 percent of YouTube viewing happens on a television and different failures surface at each size.
 
 **Leading lines.** Diagonals that converge on the focal point: architecture, a corridor, a road, a row of anything, a gaze direction, a pointing gesture. Lines that lead nowhere are clutter wearing a nice hat.
 
@@ -37,6 +46,8 @@ Three pairings worth reaching for when the wheel is not giving enough separation
 - white on a low saturation color
 
 **Color makes a promise before a word is read.** Red reads danger and urgency. Blue reads intelligence and calm. Two thumbnails at identical craft level, one red and one blue, are selling two different videos. Pick the one that matches the video you actually made.
+
+**Check it in dark mode.** A thumbnail built on a white screenshot dies the instant the viewer is in dark mode, because the contrast carrying it was contrast against the *page*, not contrast *inside the frame*. Every design gets checked in both modes, every time. This is the most commonly missed failure in the whole framework.
 
 **Lighting.** Flat and bright beats moody, every time, at thumbnail size. A badly lit asset cannot be rescued in post; the fix always looks worse than shooting it correctly. Light the asset, do not repair it.
 
@@ -107,3 +118,6 @@ The pass bar is **8**. Below 8, name the failing C and give exactly one specific
 
 ## Credit
 The Four Cs structure comes from the **Thumbnail MasterClass** by david, dill and ant. This file is a working synthesis of that framework cross-checked against the teardown creators listed in `frameworks/creator-consensus.md`, plus what corpus data has since corrected. Go buy the original, it is worth it.
+
+
+</four_cs>

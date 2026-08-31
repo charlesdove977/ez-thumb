@@ -1,4 +1,9 @@
+<self_update>
+
 # Self Update
+
+## Purpose
+How EZ Thumb writes what it learned back into itself, so onboarding happens once instead of every run.
 
 How EZ Thumb writes what it learned back into itself, so onboarding happens once instead of every run.
 
@@ -97,3 +102,22 @@ Keeping the old corpus folder is what makes the second refresh more valuable tha
 `npx ez-thumb update --clean` skips the stash and starts over. Only for an operator who wants a genuinely fresh install.
 
 If a future version changes the shape of a context file, migrate it in place on the first run after the upgrade and say so in one line. Never silently discard an operator's data because a schema moved.
+
+
+---
+
+## Anti-Patterns
+
+| Pattern | Why it fails |
+| --- | --- |
+| Flipping `status: configured` before the checklist passes | A half-built corpus gets trusted as a full one |
+| Inferring configured state from the presence of a corpus folder | A failed onboard leaves a folder behind |
+| Deleting a superseded finding instead of conditioning it | Destroys the comparison, and nobody can tell later whether evidence or opinion changed |
+| Overwriting `channel-profile.md` on refresh | The operator answered those questions once; their channel did not change because their competitors did |
+| Deleting the previous corpus folder | Kills the rising-versus-burning-out comparison, which is the whole value of a second pull |
+| Writing an undated claim into an append-only file | In a year it is indistinguishable from a current one |
+
+## Sources
+Original to this skill. The condition-do-not-delete rule follows from keeping dated evidence comparable over time.
+
+</self_update>

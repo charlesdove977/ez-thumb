@@ -1,3 +1,8 @@
+---
+name: packaging-concept
+description: Structure for presenting one title plus thumbnail concept, including its corpus citation, ascii composition sketch, and self-score.
+---
+
 # Template: Packaging Concept
 
 One per concept. Three concepts per run. Fill every field; a blank field is a decision that has not been made yet.

@@ -1,4 +1,9 @@
+<curiosity_gap>
+
 # The Curiosity Gap
+
+## Purpose
+How a thumbnail earns a click.
 
 How a thumbnail earns a click. Read it when picking the lever for a concept, and when diagnosing a thumbnail that looks good and still gets ignored.
 
@@ -85,3 +90,6 @@ Practical consequence: sketch the idea before opening any generator. If you cann
 
 ## Credit
 Curiosity gap structure and the good clickbait position come from the **Thumbnail MasterClass** by david, dill and ant. Saturation and paradox findings are from corpus measurement, see `frameworks/corpus-method.md`.
+
+
+</curiosity_gap>

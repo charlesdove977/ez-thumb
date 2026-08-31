@@ -1,4 +1,9 @@
+<five_step_process>
+
 # The Five Step Process
+
+## Purpose
+How a chosen concept becomes something you can actually generate.
 
 Idea, Sketch, Prompt, Mockup, Design. Read it when moving from a chosen concept to something you can actually generate.
 
@@ -21,6 +26,23 @@ One sentence. What is the unanswered question, and which lever from `frameworks/
 If you cannot write that sentence, stop. Nothing downstream fixes a missing idea.
 
 **Write the thumbnail before the video where you can.** Deciding the package first tells you what the video has to deliver, and it stops you finishing a video that turns out to be unpackageable.
+
+---
+
+### Generate packaging concepts, not one idea
+
+Before step 2, spread the idea across distinct angles. The four that reliably produce genuinely different frames:
+
+| Angle | What it does |
+| --- | --- |
+| **Safe** | The familiar framing the niche already rewards. Data backed, recognizable |
+| **Emotion** | The feeling at the peak moment. Thrill, fear, relief |
+| **Contrast / Progression** | Before against after, or scale against expectation |
+| **Leverage** | Borrow recognition. A known face, a known mark, a known interface |
+
+Title angles pair with these: **Safe** (data backed, familiar), **Live** (rare, happening now), **Counterintuitive** (negative framing, the claim that contradicts the niche).
+
+**Package the pair, not the parts.** A title and a thumbnail are designed together as one unit, and tested together as one unit. One great idea beats three forgettable ones, so if two of your three concepts are filler you are testing one idea against noise.
 
 ---
 
@@ -85,3 +107,11 @@ Then run `checklists/thumbnail-quality.md` before anything goes live.
 | Shipping the mockup | Generated faces and invented UI read as fake, and the audience does clock it |
 | Craft words inside the prompt | They get typeset into the image |
 | One generation instead of five | No spread means no comparison means no judgment |
+
+
+---
+
+## Sources
+The five steps, and the packaging-concepts-before-design rule, come from the Thumbnail MasterClass by david, dill and ant. The paper-sketch step is independently taught by Devesh Sharma. The element hierarchy applied at the sketch stage is DecodingYT's. The two generator failure modes at step 4 are from production runs. Links in `frameworks/creator-consensus.md`.
+
+</five_step_process>

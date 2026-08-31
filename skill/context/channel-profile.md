@@ -1,3 +1,8 @@
+---
+name: channel-profile
+description: The operator's channel, audience, assets, and dated record of what has worked. Filled by /ez-thumb-onboard, protected by /ez-thumb refresh.
+---
+
 # Channel Profile
 
 Captured once during `/ez-thumb-onboard` so intake never re-asks what is already known.

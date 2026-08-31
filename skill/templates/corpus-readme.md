@@ -1,3 +1,8 @@
+---
+name: corpus-readme
+description: Structure for the README written into every reference/<date>-<niche>/ corpus folder, including the expiry stamp and the five findings.
+---
+
 # Template: Corpus README
 
 Written to `reference/<YYYY-MM-DD>-<niche-slug>/README.md` at the end of onboard and refresh.
