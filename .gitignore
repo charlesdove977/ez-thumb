@@ -1,0 +1,11 @@
+node_modules/
+.DS_Store
+*.log
+*.tgz
+.vscode/
+.idea/
+
+# A user's competitor corpus is THEIR local research.
+# Never commit competitor thumbnails to a public repo.
+skill/reference/*/
+!skill/reference/.gitkeep

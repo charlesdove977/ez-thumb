@@ -1,0 +1,48 @@
+{
+  "name": "ez-thumb",
+  "version": "1.0.0",
+  "description": "YouTube thumbnail and title packaging studio for Claude Code. Onboard once: it finds your competitors (vidIQ or your own list), pulls their best thumbnails through Apify, reads every image with vision, and writes the whole corpus back into itself. After that /ez-thumb packages any video against evidence from your actual niche instead of generic thumbnail advice.",
+  "keywords": [
+    "claude-code",
+    "claude",
+    "skill",
+    "youtube",
+    "thumbnail",
+    "thumbnails",
+    "youtube-thumbnail",
+    "ctr",
+    "packaging",
+    "title-generator",
+    "competitor-research",
+    "apify",
+    "vidiq",
+    "creator-tools",
+    "youtube-growth"
+  ],
+  "homepage": "https://github.com/charlesdove977/ez-thumb#readme",
+  "bugs": {
+    "url": "https://github.com/charlesdove977/ez-thumb/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/charlesdove977/ez-thumb.git"
+  },
+  "license": "MIT",
+  "author": "Charles J Dove (https://www.charlieautomates.com/)",
+  "type": "commonjs",
+  "bin": {
+    "ez-thumb": "bin/ez-thumb.js"
+  },
+  "files": [
+    "bin/",
+    "skill/",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=14"
+  },
+  "scripts": {
+    "test": "node bin/ez-thumb.js --version && echo OK"
+  }
+}
