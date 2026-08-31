@@ -96,7 +96,14 @@ function restoreOperatorData(stash, target) {
 function isConfigured(target) {
   const ds = path.join(target, 'context', 'data-source.md');
   if (!fs.existsSync(ds)) return false;
-  return !/status:\s*unconfigured/i.test(fs.readFileSync(ds, 'utf8'));
+  const raw = fs.readFileSync(ds, 'utf8');
+  // Only the YAML frontmatter block is authoritative. The document body
+  // explains both states in prose, so scanning the whole file would match
+  // the explanation instead of the actual value.
+  const fm = raw.match(/^---\r?\n([\s\S]*?)\r?\n---/);
+  if (!fm) return false;
+  const status = fm[1].match(/^status:\s*(\S+)/m);
+  return !!status && status[1].toLowerCase() === 'configured';
 }
 
 function commandStubs() {
