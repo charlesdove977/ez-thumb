@@ -15,6 +15,8 @@
   <a href="https://github.com/charlesdove977/ez-thumb/stargazers"><img src="https://img.shields.io/github/stars/charlesdove977/ez-thumb?style=flat" alt="stars"></a>
 </p>
 
+Step-by-step guide and setup walkthrough: [EZ Thumb guide on charlieautomates.com](https://charlieautomates.com/free-resources/#ez-thumb)
+
 ---
 
 ## Install
